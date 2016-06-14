@@ -1,0 +1,16 @@
+{
+  "args": ["--privileged"],
+  "context": ["MacOSX10.11.sdk.tar.bz2"],
+
+  "scons": {
+    "cross_osx": 1,
+    "ccflags": "-I/mingw64/include",
+    "linkflags": "-L/mingw64/lib",
+    "disable_local": "libevent re2",
+    "package_type": "dmg"
+  },
+
+  "images": {
+    "camotics": {"projects": ["camotics"]}
+  }
+}
